@@ -1,2 +1,37 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Emacs on DN 的探索笔记</title><link>https://jousimies.github.io/categories/emacs/</link><description>Recent content in Emacs on DN 的探索笔记</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://jousimies.github.io/categories/emacs/index.xml" rel="self" type="application/rss+xml"/><item><title>Emacs 配置参考集</title><link>https://jousimies.github.io/posts/emacs-%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83%E9%9B%86/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://jousimies.github.io/posts/emacs-%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83%E9%9B%86/</guid><description> If I have seen further, it is by standing on the shoulders of giants. &amp;mdash;- Sir Isaac Newton
-https://github.com/bbatsov/prelude https://github.com/syl20bnr/spacemacs https://github.com/seagle0128/.emacs.d https://github.com/hlissner/doom-emacs https://github.com/remacs/remacs https://github.com/redguardtoo/emacs.d https://github.com/manateelazycat/lazycat-emacs https://github.com/purcell/emacs.d https://github.com/MatthewZMD/.emacs.d https://sachachua.com/dotemacs/ https://github.com/raxod502/radian https://tecosaur.github.io/emacs-config/config.html https://github.com/mrvdb/emacs-config https://qua.name/mrb/an-org-babel-based-emacs-configuration https://github.com/willbchang/ward-emacs</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Emacs on 探索笔记</title>
+    <link>https://jousimies.github.io/categories/emacs/</link>
+    <description>Recent content in Emacs on 探索笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://jousimies.github.io/categories/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emacs 配置参考集</title>
+      <link>https://jousimies.github.io/posts/emacs-%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83%E9%9B%86/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jousimies.github.io/posts/emacs-%E9%85%8D%E7%BD%AE%E5%8F%82%E8%80%83%E9%9B%86/</guid>
+      <description> If I have seen further, it is by standing on the shoulders of giants. &amp;mdash;- Sir Isaac Newton
+  https://github.com/bbatsov/prelude https://github.com/syl20bnr/spacemacs https://github.com/seagle0128/.emacs.d https://github.com/hlissner/doom-emacs https://github.com/remacs/remacs https://github.com/redguardtoo/emacs.d https://github.com/manateelazycat/lazycat-emacs https://github.com/purcell/emacs.d https://github.com/MatthewZMD/.emacs.d https://sachachua.com/dotemacs/ https://github.com/raxod502/radian https://tecosaur.github.io/emacs-config/config.html https://github.com/mrvdb/emacs-config https://qua.name/mrb/an-org-babel-based-emacs-configuration https://github.com/willbchang/ward-emacs  </description>
+    </item>
+    
+    <item>
+      <title>使用 Emacs(ox-hugo) &#43; Hugo &#43; Github-pages &#43; Github-actions 管理 blog</title>
+      <link>https://jousimies.github.io/posts/%E4%BD%BF%E7%94%A8-hugo-&#43;-github-pages-&#43;-github-action-%E7%AE%A1%E7%90%86-blog/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jousimies.github.io/posts/%E4%BD%BF%E7%94%A8-hugo-&#43;-github-pages-&#43;-github-action-%E7%AE%A1%E7%90%86-blog/</guid>
+      <description>今天第一次尝试使用 hugo 进行写 blog ，因为之前虽然断断续续的尝试过 wordpress ， mediawiki 等方式，但是一直没有一个好的体验。查了很多关于 hugo 写 bolg 的资料，网上关于这方面的的文章特别的多，但是不是很小白，有些文章己经过时，参考这些文章走了很多的弯路。今天决定一定要把这个跑通。下面是我的折腾记录。
+Github 基础 创建仓库 这部分先创建下面两个 github 仓库。具体的过程看官方的手册 （如果这部分你不清楚，建议先补下相关知识）。
+  https://github.com/Jousimies/Jousimies.github.io
+对于 hugo 而言，这个仓库 需要是 public 的 ，不能是 private 的。这个仓库名必需要 XXXX.github.io 的形式。
+  https://github.com/Jousimies/hugo-source
+这个仓库可以是 public 的，也可以是 private 的。 建议选 private 。
+  以下教程中用到以上两个仓库的地方，请换成自己创建的仓库的地址。
+管理仓库 - SSH 方式 虽然可以使用 https 的方式 clone ，但是目前 github 己经不充许使用密码进行仓库的 push ，需要使用 token 或者是 ssh 。我使用 ssh 。
+关于 ssh 管理仓库的知识，这部分可以看 官方手册 。 这部分必需要做 。</description>
+    </item>
+    
+  </channel>
+</rss>

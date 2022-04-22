@@ -12,7 +12,7 @@ https://github.com/Jousimies/hugo-source
 这个仓库可以是 public 的，也可以是 private 的。 建议选 private 。
 以下教程中用到以上两个仓库的地方，请换成自己创建的仓库的地址。
 管理仓库 - SSH 方式 虽然可以使用 https 的方式 clone ，但是目前 github 己经不充许使用密码进行仓库的 push ，需要使用 token 或者是 ssh 。我使用 ssh 。
-关于 ssh 管理仓库的知识，这部分可以看 官方手册 。 这部分必需要做 。</description></item><item><title>知识管理</title><link>https://jousimies.github.io/posts/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://jousimies.github.io/posts/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/</guid><description>这是我 2020-10-30 日写的。目前 2022-04-21 我的知识管理 workflow 有了很大进，后面会重新写下自己的工作流程。
+关于 ssh 管理仓库的知识，这部分可以看 官方手册 。 这部分必需要做 。</description></item><item><title>哲学和逻辑</title><link>https://jousimies.github.io/posts/%E5%93%B2%E5%AD%A6%E5%92%8C%E9%80%BB%E8%BE%91/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://jousimies.github.io/posts/%E5%93%B2%E5%AD%A6%E5%92%8C%E9%80%BB%E8%BE%91/</guid><description> 逻辑哲学是逻辑学中提出的哲学问题，就像科学哲学是科学中提出的哲学问题。而哲学逻辑，不存在什么哲学逻辑，只不过是逻辑和哲学问题关联起来了而已。 &amp;mdash;- 苏珊哈克</description></item><item><title>知识管理</title><link>https://jousimies.github.io/posts/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://jousimies.github.io/posts/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/</guid><description>这是我 2020-10-30 日写的。目前 2022-04-21 我的知识管理 workflow 有了很大进，后面会重新写下自己的工作流程。
 知识的管理涉及到知识的获取、组织、分享和应用四个方面。
 文献管理与阅读流程 通过谷歌快讯订阅相关关键字或研究者到指定邮箱，通过邮箱定期关注最新的研究前沿。
 通过阅读文献的参考文献进行文献的挖掘。

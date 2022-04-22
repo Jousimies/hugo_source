@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>PersonalManagement on 探索世界，践行人生</title><link>https://jousimies.github.io/categories/personalmanagement/</link><description>Recent content in PersonalManagement on 探索世界，践行人生</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://jousimies.github.io/categories/personalmanagement/index.xml" rel="self" type="application/rss+xml"/><item><title>知识管理</title><link>https://jousimies.github.io/posts/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://jousimies.github.io/posts/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/</guid><description>这是我 2020-10-30 日写的。目前 2022-04-21 我的知识管理 workflow 有了很大进，后面会重新写下自己的工作流程。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>PersonalManagement on 探索世界，践行人生</title><link>https://jousimies.github.io/categories/personalmanagement/</link><description>Recent content in PersonalManagement on 探索世界，践行人生</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://jousimies.github.io/categories/personalmanagement/index.xml" rel="self" type="application/rss+xml"/><item><title>知识管理</title><link>https://jousimies.github.io/posts/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://jousimies.github.io/posts/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/</guid><description>这是我 2020-10-30 日写的。目前 2022-04-21 我的知识管理 workflow 有了很大进，后面会重新写下自己的工作流程。
 知识的管理涉及到知识的获取、组织、分享和应用四个方面。
 文献管理与阅读流程 通过谷歌快讯订阅相关关键字或研究者到指定邮箱，通过邮箱定期关注最新的研究前沿。
 通过阅读文献的参考文献进行文献的挖掘。
@@ -14,89 +14,4 @@ alt + f8 整理下entry。
 决定是否深入进行阅读。
 文献深入阅读通过acrobat进行，通过微软输入法设置快捷键，在pdf中插入以下内容：
 分类2. 主题3. 架构4. 待解决问题5. 重要的句子和主旨6. 未解决问题7.研究相关性8.可以利用什么 这部分是阅读一篇文献需要解决的问题。
-架构通过设置pdf的书签进行。重要的句子和主旨的话也添加到书签当中，更改标签的颜色进行区分。</description><content:encoded><![CDATA[<p>这是我 2020-10-30 日写的。目前 2022-04-21 我的知识管理 workflow 有了很大进，后面会重新写下自己的工作流程。</p>
-<p>知识的管理涉及到知识的获取、组织、分享和应用四个方面。</p>
-<h2 id="文献管理与阅读流程">文献管理与阅读流程</h2>
-<ol>
-<li>
-<p>通过谷歌快讯订阅相关关键字或研究者到指定邮箱，通过邮箱定期关注最新的研究前沿。</p>
-</li>
-<li>
-<p>通过阅读文献的参考文献进行文献的挖掘。</p>
-</li>
-<li>
-<p>现在文献一般都有网页版，可以方便的进行相关的探索。</p>
-</li>
-<li>
-<p>通过zotero保存文献。zotero的优势在于会自动更新题录相关信息，极少部分需要自己手动调整。</p>
-</li>
-<li>
-<p>zotero需要安装插件，better bibtex for zotero。</p>
-</li>
-<li>
-<p>export libray，需要勾选自动更新题录选项。</p>
-</li>
-<li>
-<p>文献的最终管理通过jabref软件进行。</p>
-</li>
-<li>
-<p>将第2步中导出的题录，import到jabref中的当前库中。</p>
-</li>
-<li>
-<p>alt + f8 整理下entry。</p>
-</li>
-</ol>
-<p>这部分涉及到题录的bibtexkey，pdf的文件位置、pdf文件的命名等。</p>
-<ol>
-<li>
-<p>打开文献的网页版，进去网页全文翻译，快速预览一边，获得主要的信息。</p>
-</li>
-<li>
-<p>决定是否深入进行阅读。</p>
-</li>
-<li>
-<p>文献深入阅读通过acrobat进行，通过微软输入法设置快捷键，在pdf中插入以下内容：</p>
-</li>
-<li>
-<ol>
-<li>分类2. 主题3. 架构4. 待解决问题5. 重要的句子和主旨6. 未解决问题7.研究相关性8.可以利用什么</li>
-</ol>
-</li>
-</ol>
-<p>这部分是阅读一篇文献需要解决的问题。</p>
-<ol>
-<li>
-<p>架构通过设置pdf的书签进行。重要的句子和主旨的话也添加到书签当中，更改标签的颜色进行区分。</p>
-</li>
-<li>
-<p>以上的内容会被jabref自动识别。</p>
-</li>
-<li>
-<p>文献的记录通过vscode进行，通过编辑latex进行记录，并生成pdf文件。</p>
-</li>
-</ol>
-<h2 id="笔记和个人事务的管理">笔记和个人事务的管理</h2>
-<ol>
-<li>
-<p>obsidian软件可以方便的进行md文件的写作和管理，取代tiddlywiki进行笔记的管理。</p>
-</li>
-<li>
-<p>tiddlywiki编辑界面不友好。</p>
-</li>
-<li>
-<p>md文件可以通过pandoc方便的导出为pdf文件或docx类型的文档，并且可以指定样式。</p>
-</li>
-<li>
-<p>个人事务通过微软的To Do软件进行。</p>
-</li>
-<li>
-<p>emacs中的org很好很强大，但是对于手机端的使用不够友善。</p>
-</li>
-<li>
-<p>大多数情况下，很难像柳比歇夫一样全部面面俱到的记录。</p>
-</li>
-<li>
-<p>可以通过手机端的tasker进行日程的简单记录，替代emacs中的强大记录功能。</p>
-</li>
-</ol>
-]]></content:encoded></item></channel></rss>
+架构通过设置pdf的书签进行。重要的句子和主旨的话也添加到书签当中，更改标签的颜色进行区分。</description></item></channel></rss>

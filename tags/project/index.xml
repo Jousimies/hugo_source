@@ -3,5 +3,6 @@ Roam research 这类大纲类软件的 daily note 功能相比 org-roam 要好�
 首先不能根据上下文的环境自动的切换输入法，这个给我带来了很大的不确定感，需要不停的使用 Shift 在中英文之间进行切换。虽然我使用 Evil 需要在 insert 和 normal 模式之间进行切换，但是这种形为是明确的，而在 RR 中输入法的切换是不明确的，需要自己明确当前的输入法状态。比如在一个词条上我要创建页面引用，我会选中词条然后通过输入[[进行，但是如果当前输入法是中文的状态就会出现【覆盖当前的词条，很不爽。
 创建 alias 不是很方便，没有 org-roam 好用。有 pomodoro 的功能，但是很简陋，不能创建多个。不能进行计时。
 RR 比较强的一方面在于文章的组织，当建立了较好的笔记库后，新建一篇文章复制可拖动 block 即可。在 org-roam 当中需要使用 org-transclusion，相较于直接拖动的操作这个会麻烦一些。
-不能方便的进行文献的引用，结合 zotero 进行文献的管理很差，但是也不是不能使用，我无感。想要使用 zotero 的可以看看这篇文章，Zotero and Roam Research，该文中需要的 zotero translator 的内容如下：
-{ &amp;#34;translatorID&amp;#34;:&amp;#34;dda092d2-a257-46af-b9a3-2f04a55cb04f&amp;#34;, &amp;#34;translatorType&amp;#34;:2, &amp;#34;label&amp;#34;:&amp;#34;Roam Metadata Export&amp;#34;, &amp;#34;creator&amp;#34;:&amp;#34;Lukas Kawerau&amp;#34;, &amp;#34;target&amp;#34;:&amp;#34;md&amp;#34;, &amp;#34;minVersion&amp;#34;:&amp;#34;2.0&amp;#34;, &amp;#34;maxVersion&amp;#34;:&amp;#34;&amp;#34;, &amp;#34;priority&amp;#34;:200, &amp;#34;configOptions&amp;#34;: { &amp;#34;getCollections&amp;#34;: &amp;#34;true&amp;#34;, &amp;#34;dataMode&amp;#34;: &amp;#34;rdf/xml&amp;#34; }, &amp;#34;inRepository&amp;#34;:false, &amp;#34;lastUpdated&amp;#34;:&amp;#34;2020-11-24 - 07:30&amp;#34; } function doExport() { var item; while (item = Zotero.</description></item></channel></rss>
+不能方便的进行文献的引用，结合 zotero 进行文献的管理很差，但是也不是不能使用，我无感。想要使用 zotero 的可以看看这篇文章，Zotero and Roam Research，该文中需要的 zotero translator 的内容去原网下载（尊重版权）。
+下载了 RR 之后，我又下载了 logseq ，两者好像啊！
+综上，这两个软件都不错，颜值高，但是不是我的菜，还是使用 org-roam 比较带劲，Emacs 的生态更好，颜值差些。</description></item></channel></rss>

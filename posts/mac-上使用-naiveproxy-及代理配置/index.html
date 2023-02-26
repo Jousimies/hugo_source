@@ -1,0 +1,45 @@
+<!doctype html><html><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><title>Mac 上使用 naiveproxy 及代理配置 - 探索世界，践行人生</title><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Naiveproxy 是一种科学上网方式，但是其没有合适的客户端可用。虽然可以使用 qv2ray 然后使用 naive 的插件方式进行，但是我个人觉得其有点过于笨重，导致我不怎么想使用 q"><meta property="og:image" content><meta property="og:title" content="Mac 上使用 naiveproxy 及代理配置"><meta property="og:description" content="Naiveproxy 是一种科学上网方式，但是其没有合适的客户端可用。虽然可以使用 qv2ray 然后使用 naive 的插件方式进行，但是我个人觉得其有点过于笨重，导致我不怎么想使用 q"><meta property="og:type" content="article"><meta property="og:url" content="https://jousimies.github.io/posts/mac-%E4%B8%8A%E4%BD%BF%E7%94%A8-naiveproxy-%E5%8F%8A%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2023-02-15T11:02:00+08:00"><meta property="article:modified_time" content="2023-02-15T11:32:10+08:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="Mac 上使用 naiveproxy 及代理配置"><meta name=twitter:description content="Naiveproxy 是一种科学上网方式，但是其没有合适的客户端可用。虽然可以使用 qv2ray 然后使用 naive 的插件方式进行，但是我个人觉得其有点过于笨重，导致我不怎么想使用 q"><script src=https://jousimies.github.iojs/feather.min.js></script>
+<link href=https://jousimies.github.io/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css rel=stylesheet><link rel=stylesheet type=text/css media=screen href=https://jousimies.github.io/css/main.ac08a4c9714baa859217f92f051deb58df2938ec352b506df655005dcaf98cc0.css><link id=darkModeStyle rel=stylesheet type=text/css href=https://jousimies.github.io/css/dark.726cd11ca6eb7c4f7d48eb420354f814e5c1b94281aaf8fd0511c1319f7f78a4.css media="(prefers-color-scheme: dark)"><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type=text/x-mathjax-config>
+		MathJax.Hub.Config({
+			tex2jax: {
+				inlineMath: [['$','$'], ['\\(','\\)']],
+				displayMath: [['$$','$$'], ['\[','\]']],
+				processEscapes: true,
+				processEnvironments: true,
+				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+				TeX: { equationNumbers: { autoNumber: "AMS" },
+						 extensions: ["AMSmath.js", "AMSsymbols.js"] }
+			}
+		});
+		</script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js onload=renderMathInElement(document.body)></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}]})})</script></head><body><div class=content><header><div class=main><a href=https://jousimies.github.io>探索世界，践行人生</a></div><nav><a href=/>Home</a>
+<a href=/posts>All posts</a>
+<a href=/about>About</a>
+<a href=/tags>Tags</a></nav></header><main><article><div class=title><h1 class=title>Mac 上使用 naiveproxy 及代理配置</h1><div class=meta>Posted on Feb 15, 2023</div></div><section class=body><p>Naiveproxy 是一种科学上网方式，但是其没有合适的客户端可用。虽然可以使用 qv2ray 然后使用 naive 的插件方式进行，但是我个人觉得其有点过于笨重，导致我不怎么想使用 qv2ray。</p><p>如果不使用 qv2ray，那只能使用 Terminal 开启以下的命令来进行科学上网。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>cd ~/naive
+</span></span><span style=display:flex><span>./naive config.json
+</span></span></code></pre></div><p>以上命令执行完并不能使你的 Safari 科学浏览网页。</p><p>如果你不使用 Safari 浏览器而是 Chrome 或者 Firefox，那么可以使用 Switchyomega 这个插件，关于它的具体使用方法可以参见 Switchyomega 主页，这里不详述。</p><p>那么要怎么才能使 Safari 也可以正常的科学上网呢？答案是使用 MacOS 自带的 Proxies 设置。</p><p></p><figure><img src=/ox-hugo/20230215110837screenshot.png alt="Figure 1: Proxies 设置界面" width=600px><figcaption><p>Figure 1: Proxies 设置界面</p></figcaption></figure><p>我设置的 naiveproxy 工作在 1080 端口，在上面的 Proxies 界面中，我尝试使用了 http 和 https 两种设置，但是都不能使 Safari 正常的工作。后来看到有 Automatic proxy configuration 这个选项，其要求是使用 pac 文件来进行科学上网。</p><p>Pac 文件怎么获取呢？我目前的方式是使用 Switchyomega 这个插件导出了一份 proxy.pac 文件来使用。暂时不知道如何不使用它来获取一份 proxy.pac 文件，或者我给你一份我使用的？</p><p>那么有了 proxy.pac 文件，需要将其放置到下面的位置当中。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>cp proxy.pac /Library/WebServer/Documents/
+</span></span></code></pre></div><p>你还需要确认你的 macos 上是否开启了 apache 服务器。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>sudo apachectl start
+</span></span></code></pre></div><p>若返回下面的，则开启成功。</p><blockquote><p>/System/Library/LaunchDaemons/org.apache.httpd.plist: service already loaded
+Load failed: 37: Operation already in progress</p></blockquote><p>在 Proxies 界面中将 proxy.pac 的地址填进去，则可以使 Safari 正常上网。若遇到不能开启科学上网的网页，则需要根据 proxy.pac 的规则，更新 proxy.pac 文件。</p><p>走到这一步，己经完成了一大半。至于为什么我不使用 Chrome 浏览器，有两个原因，一个我使用 Bitwarden 管理自己的密码，在 Chrome 上使用该插件不能结合 MacOS 的指纹硬件开启，需要自己手动输入 Master password。或者需要在后台开启 Bitwarden 的桌面客户端。另外一个 Chrome 上的网页翻译没有 Safari 的好用，经常有时候开启了翻译没有反应。</p><p>己经可以使浏览器正常使用，但是 Terminal 终端还是不能进行代理上网。我根据 <a href=https://aaronflower.github.io/abc/mac-termical-proxy.html>Mac 终端代理设置</a> 这篇文章进行了相应的设置，使得 Terminal 终端也可以正常代理上网。</p><p>需要在终端中执行：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>export http_proxy<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;http://localhost:8118&#39;</span>
+</span></span><span style=display:flex><span>export https_proxy<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;http://localhost:8118&#39;</span>
+</span></span></code></pre></div><p>若要取消使用终端代理：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>unset http_proxy
+</span></span><span style=display:flex><span>unset https_proxy
+</span></span></code></pre></div><p>或者可以使用下面的设置，更方便一些：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># proxy on</span>
+</span></span><span style=display:flex><span>proxy <span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>    echo <span style=color:#e6db74>&#34;start use privoxy proxy&#34;</span>
+</span></span><span style=display:flex><span>    brew services start privoxy
+</span></span><span style=display:flex><span>    export no_proxy<span style=color:#f92672>=</span>localhost,127.0.0.0,127.0.0.1,127.0.1.1,local.home
+</span></span><span style=display:flex><span>    export http_proxy<span style=color:#f92672>=</span>http://localhost:8118
+</span></span><span style=display:flex><span>    export https_proxy<span style=color:#f92672>=</span>http://localhost:8118
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># no privoxy</span>
+</span></span><span style=display:flex><span>noproxy <span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>    echo <span style=color:#e6db74>&#34;stop use privoxy proxy&#34;</span>
+</span></span><span style=display:flex><span>    brew services stop privoxy
+</span></span><span style=display:flex><span>    export http_proxy<span style=color:#f92672>=</span>
+</span></span><span style=display:flex><span>    export https_proxy<span style=color:#f92672>=</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span>
+</span></span></code></pre></div><p>至此，Safari 和 Terminal 都可以正常科学上网。</p></section><div class=post-tags></div></article></main><footer><div style=display:flex><a class=soc href=https://github.com/Jousimies/.emacs.d rel=me title=GitHub><i data-feather=github></i></a>
+<a class=border></a></div><div class=footer-info>2023 <a href=https://github.com/athul/archie>Archie Theme</a> | Built with <a href=https://gohugo.io>Hugo</a></div></footer><script>feather.replace()</script></div></body></html>

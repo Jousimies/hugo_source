@@ -1,1 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>笔记体系 on 探索世界，践行人生</title><link>https://jousimies.github.io/tags/%E7%AC%94%E8%AE%B0%E4%BD%93%E7%B3%BB/</link><description>Recent content in 笔记体系 on 探索世界，践行人生</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 19 Jan 2023 16:01:00 +0800</lastBuildDate><atom:link href="https://jousimies.github.io/tags/%E7%AC%94%E8%AE%B0%E4%BD%93%E7%B3%BB/index.xml" rel="self" type="application/rss+xml"/><item><title>All-in-one 笔记系统</title><link>https://jousimies.github.io/posts/2023-01-19t1354/</link><pubDate>Thu, 19 Jan 2023 16:01:00 +0800</pubDate><guid>https://jousimies.github.io/posts/2023-01-19t1354/</guid><description>之前在知乎上看到一个问题是：有没有一个All in One的笔记系统?。我在下面的回答中提供了一个方案就是使用 Emacs。 那么现在说说怎么使用 Emacs 进</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>笔记体系 on Explore the world, fulfill your being.</title><link>https://jousimies.github.io/tags/%E7%AC%94%E8%AE%B0%E4%BD%93%E7%B3%BB/</link><description>Recent content in 笔记体系 on Explore the world, fulfill your being.</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 19 Jan 2023 16:01:00 +0800</lastBuildDate><atom:link href="https://jousimies.github.io/tags/%E7%AC%94%E8%AE%B0%E4%BD%93%E7%B3%BB/index.xml" rel="self" type="application/rss+xml"/><item><title>All-in-one 笔记系统</title><link>https://jousimies.github.io/posts/2023-01-19t1354/</link><pubDate>Thu, 19 Jan 2023 16:01:00 +0800</pubDate><guid>https://jousimies.github.io/posts/2023-01-19t1354/</guid><description>之前在知乎上看到一个问题是：有没有一个All in One的笔记系统?。我在下面的回答中提供了一个方案就是使用 Emacs。
+那么现在说说怎么使用 Emacs 进行笔记的管理，如何做到 all-in-one。
+在上面的提问中，提问者列出了自己关于all-in-one笔记的系统的几点要求。笔记记的是什么内容呢，初步列举如下：
+笔记内容 文本+格式 笔记肯定第一位的就是需要记录大量的文本内容。那么文本只能是汉字、英文、字母吗？当然不是，文本也有格式，如对文本进行加粗、斜体、引用、列表等等。文本+格式只要是个笔记软件应该都能提供（window 上的 txt 记事本不行，过于简陋）。
+但是文本与格式分离，这不是哪个软件都能做好的。如 word 就很难做到样式和内容的分离，以我的经验，它可以做到但是很难，你需要对word 有充分的了解。Latex 就很容易做到文本与样式的分离，但是它难在非所见即所得。（有什么软件你需要深度使用，但是可以对其不需要了解的吗？没有什么是纯傻瓜式的。）
+图表 我认为表格只是文本内容呈现的另一种方式，笔记系统中不需要使用过于复杂的表格。
+这里要提到 onenote 笔记软件，这个软件我很多次都想利用起来，但是最终都没能。现在想来，它就像一个画板，做笔记像画画，内容超出屏幕范围时，很难对内容有个全局的了解。相对应的是幕布类的大纲式的软件（有了解没用过，不评价）。Onenote软件作的笔记如果想要内容很规整，一个方法就是嵌套使用表格（可以很漂亮，但是不推荐）。
+图是笔记系统中一个很重要的组成部分。笔记系统中插入图我想有两种方式，一种是如word ，印象笔记的方式。一种是类似org-mode, markdown这种方式，以链接的方式插入到笔记当中。我选择第二种。
+图直接插入到笔记当中的方式，往往是专有格式的软件。这类笔记系统对于软件本体依赖过高，不利于笔记在不同系统中的转移。图直接插入到笔记当中，会导致单个笔记的体积很大，而且很难在不同的笔记中进行复用。相应的使用图片链接的方式就没有上述的问题。
+公式 公式我只推荐使用 latex ，以文本的方式进行管理。如 Word 上使用 mathtype 进行公式的输入非常差，难以编排，交叉引用。
+如果你认为latex 输入公式很慢，不直观，是大概率你没有使用合适的方法。你需要的是快速输入的方法以及公式预览。Latex公式的效果看看这个demo。
+文献管理 文献管理软件有很多，如zotero，endnote，mendeley，jabref等等。笔记系统中我推荐使用zotero，其他都不做推荐。我更喜欢的方式是直接管理bibtex文件，zotero只是我用来收集bib的工具。
+此外，还应关注的是文献文件的格式，大部份应该都是pdf 文件。
+如果是caj等格式，那么推荐你使用tampermonkey在知网上下载pdf 格式的，而不是caj格式的（我讨厌caj）。
+如果你看的是出版物，网上有很多提供的epub格式。
+音频和视频 这里不过多写，我没这个需求。对此没什么实践。
+笔记的原则 笔记本身 不分来源，不分重要性，只要是自己关心、想记录下来的内容，都可以一点一滴地写在笔记本上。《如何有效整理信息》
+记笔记很难的一点在于归类，以什么主题进行记录。如何有效整理信息一书的作者提出的不分来源，不分重要性，只要是自己关心的都可以记录下来。
+这样也可以解决一个问题，记笔记有什么用？笔记记录的作用不一定在当下，有可能在以后，当你需要的时候有一个系统可以供你查询。关于笔记的主题或者分类我的关点就是不分类，或者只是给一个大类而不具体的进行区分，当相关的笔记积累了足够多的内容再进行整理与归类。不依赖分类，取而代之的是建立以搜索为基础的笔记管理方法。
+笔记的原则关于笔记本身：记什么？记你关心的内容！怎么分类？不分类！
+笔记工具 传统的笔记工具以纸笔为载体，各种手账、剪纸等，以纸笔为载体是纸媒时代的最有效的进行笔记管理的方式，如何有效整理信息这本书的作者就提出了一元化的笔记方法，作者本人也积累了大量的笔记本。个人很配服他的这种毅力，平常人很难一以贯之的坚持进行笔记的记录。
+但是我个人不怎么喜欢这种基于纸笔的笔记管理方式，当前是网络时代，我们有太多的信息是基于网站等获取的，我们身处于电子时代，我认为笔记的最终去处是电子化。出门不一定会携带纸笔，但是一定会带上手机，部份情况下不适合使用电子设备进行笔记的记录也可以暂时的使用纸笔进行记录，事后再进行电子化。
+现在电子笔记软件有太多的可选项，Onenote 、印象笔记、Roam Research 、Notion 等等。可选择的太多有很多人就有了困难选择症，在多种尝试之后我的选择是以基于 org-mode, 以 Emacs 文本编辑器为载体的笔记管理。
+笔记原则之笔记工具：以电子笔记为主，辅之纸笔。
+笔记的流程 在 How to take smart notes 中作者提出了如下的笔记流程。这个流程是关于记笔记的终极答案，但是个人觉得这样的笔记方式对于笔记的记录是一件很耗费精神的事情，由其是在把临时笔记和文学笔记转化为永久笔记的过程中，所以个人认为这一步可以简化。</description></item></channel></rss>

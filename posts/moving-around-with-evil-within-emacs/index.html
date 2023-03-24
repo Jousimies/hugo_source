@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><title>Moving around with evil within Emacs - EXPLORE THE WORLD, FULFILL YOUR BEING.</title><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="高效移动光标的方式"><meta property="og:image" content><meta property="og:title" content="Moving around with evil within Emacs"><meta property="og:description" content="高效移动光标的方式"><meta property="og:type" content="article"><meta property="og:url" content="https://jousimies.github.io/posts/moving-around-with-evil-within-emacs/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2023-03-24T12:27:00+08:00"><meta property="article:modified_time" content="2023-03-24T12:28:12+08:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="Moving around with evil within Emacs"><meta name=twitter:description content="高效移动光标的方式"><script src=https://jousimies.github.iojs/feather.min.js></script>
+<link href=https://jousimies.github.io/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css rel=stylesheet><link rel=stylesheet type=text/css media=screen href=https://jousimies.github.io/css/main.e0d6b3927acffd9363375f7083f3a22dedc76784a754493e922cf7ced836d532.css><link id=darkModeStyle rel=stylesheet type=text/css href=https://jousimies.github.io/css/dark.726cd11ca6eb7c4f7d48eb420354f814e5c1b94281aaf8fd0511c1319f7f78a4.css media="(prefers-color-scheme: dark)"><script type=text/javascript src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script type=text/x-mathjax-config>
+		MathJax.Hub.Config({
+			tex2jax: {
+				inlineMath: [['$','$'], ['\\(','\\)']],
+				displayMath: [['$$','$$'], ['\[','\]']],
+				processEscapes: true,
+				processEnvironments: true,
+				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+				TeX: { equationNumbers: { autoNumber: "AMS" },
+						 extensions: ["AMSmath.js", "AMSsymbols.js"] }
+			}
+		});
+		</script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js onload=renderMathInElement(document.body)></script>
+<script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}]})})</script></head><body><div class=content><header><div class=main><a href=https://jousimies.github.io>EXPLORE THE WORLD, FULFILL YOUR BEING.</a></div><nav><a href=/>HOME</a>
+<a href=/posts>POSTS</a>
+<a href=/tags>TAGS</a>
+<a href=/about>ABOUT</a></nav></header><main><article><div class=title><h1 class=title>Moving around with evil within Emacs</h1><div class=meta>Posted on Mar 24, 2023</div><div><nav id=TableOfContents></nav></div></div><section class=body><p>我在 Emacs 中使用 Evil，一个 vim 模式编辑实现。高效的移动光标到指定的位置谁不想呢？</p><ul><li><p>上下左右使用对应的字母， <code>k</code> <code>j</code> <code>h</code> <code>l</code> 移动。
+不要无脑使用 <code>j</code> 和 <code>k</code> 来移动光标到指定行，虽然没有心智负担，但是这不高效。
+三行以内可以用 <code>j</code> 和 <code>k</code> ，超过三行使用 <code>SPC j</code> 和 <code>SPC k</code> 。</p></li><li><p>快速移动屏幕，使用 <code>C-u</code> 和 <code>C-d</code> 。</p></li><li><p>移动到文件头部和底部，使用 <code>gg</code> 和 <code>G</code> 。</p></li><li><p>快速移动到某一行，使用 <code>SPC j</code> 和 <code>SPC k</code> 。
+需要使用 evil-easymotion 插件</p></li><li><p>行内移动使用 <code>w(W)</code> 和 <code>b(B)</code> ，移动到行首用 <code>0</code> ，移动到行尾使用 <code>$</code> 。</p></li><li><p>行内跳转到某一个字符使用 <code>f</code> 或 <code>t</code> 进行搜索。
+中文行内移动需要使用 evil-find-char-pinyin 插件，使用 <code>f</code> 或 <code>t</code> 进行拼音首字母的查找。
+<code>;</code> 会重复上一个操作，无脑按。</p></li><li><p>文档内搜索使用 <code>/</code> 进行
+需要安装插件 evil-anzu ，可以显示匹配的数量及当前是第几个。</p></li><li><p>切换 file 或 URL 使用 <code>gf</code> 调用 <code>find-file-at-point</code> ，会根据当前光标上的信息选择打开文件或查找文件或打开URL。</p></li><li><p>切换 buffer 使用 <code>gb</code> 调用 <code>tabspaces-switch-to-buffer</code> ，这个需要安装 tabspaces 插件。</p></li><li><p>切换 tab 使用 <code>gs</code> 调用 <code>tab-switch</code> 。</p></li></ul><p>以上，使用 vim 式的模式编辑需要频繁的在 normal insert 和 visual 模式之间切换。为了更好的使用，在 MacOS 中我使用 Karabiner 对按键重新进行了映射。</p><p><code>Caps</code> 单独按时是 <code>Esc</code> 键，组合按是 <code>Ctrl</code> 键。 <code>Enter</code> 单独按是回车键，组合按时 <code>Ctrl</code> 键。</p></section><div class=post-tags></div></article></main><footer><div style=display:flex><a class=soc href=https://github.com/Jousimies/.emacs.d rel=me title=GitHub><i data-feather=github></i></a>
+<a class=border></a></div><div class=footer-info>2023 <a href=https://github.com/athul/archie>Archie Theme</a> | Built with <a href=https://gohugo.io>Hugo</a></div></footer><script>feather.replace()</script></div></body></html>
